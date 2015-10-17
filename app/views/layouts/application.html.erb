@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ken Hibino - Full Stack Developer</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header id="main_navigation" class="clearfix">
+    <a href="#" class="name">Ken Hibino</a>
+    <nav>
+      <a href="#">Articles</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+
+<%= yield %>
+
+
+<footer id="main_footer">
+  <p class="copyright">&copy; 2015 Ken Hibino</p>
+  <nav>
+    <a href="#"><span class="icon-twitter"></span></a>
+    <a href="#"><span class="icon-github2"></span></a>
+    <a href="#"><span class="icon-google-plus"></span></a>
+  </nav>
+</footer>
+
+</body>
+</html>

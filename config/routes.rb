@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'contact' => 'static_pages#contact'
+  
+  resources :articles, only: [:index, :show]
+
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

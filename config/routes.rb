@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'contact' => 'static_pages#contact'
   
-  resources :articles, only: [:index, :show]
+  resources :articles
 
   root 'static_pages#home'
 

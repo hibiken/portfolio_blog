@@ -1,0 +1,55 @@
+
+/******* Header *******/
+#main_navigation {
+  padding: 2.5em 5%;
+  border-bottom: 1px solid $border;
+  .name {
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border: 2px solid $border;
+    padding: 1rem;
+    text-decoration: none;
+    color: $dark;
+    float: left;
+  }
+  nav {
+    float: right;
+    padding-top: 1.5rem;
+    a {
+      color: $dark;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+
+/******* footer *******/ 
+
+#main_footer {
+  padding: 2.5em 5%;
+  border-top: 1px solid $border;
+  .copyright {
+    font-size: 0.9em;
+    float: left;
+    margin: 0;
+  }
+  nav {
+    float: right;
+    a {
+      text-decoration: none;
+      span {
+        color: $dark;
+        margin-left: 1em;
+        padding-top: 0.2em;
+        &:hover {
+          color: $highlight;
+        }
+      }
+    }
+  }
+}

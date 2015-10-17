@@ -1,0 +1,41 @@
+/******* pagination *******/
+.pagination:before,
+.pagination:after {
+  content: ' ';
+  display: table;
+}
+
+.pagination:after {
+  clear: both;
+}
+.pagination {
+  text-align: center;
+  margin: 0 0 3em 0;
+  a, .previous_page, .current, .next_page {
+    padding: 0.75em 1em;
+    margin: 0.5em;
+    border-radius: 0.15em;
+    line-height: 20px;
+    text-decoration: none;
+    background: $white;
+    font-weight: 700;
+    font-size: 0.7em;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      background: $highlight;
+      color: $white;
+    }
+  }
+  .current {
+    background: $highlight;
+    color: $white;
+  }
+  .disabled {
+    color: #c0c0c0;
+    &:hover {
+      color: #c0c0c0;
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+
+
+/******* Articles index *******/ 
+#page_title {
+  text-align: center;
+  border-bottom: 1px solid $border;
+  padding: 3em 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#posts_wrapper {
+  padding: 3em 0;
+  .post {
+    text-align: center;
+    .date {
+      font-size: 0.9em;
+      margin: 0;
+    }
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      text-transform: uppercase;
+      a {
+        text-decoration: none;
+        color: $dark;
+        &:hover {
+          color: $highlight;
+        }
+      }
+    }
+    hr {
+      margin: 3em auto;
+    }
+  }
+}

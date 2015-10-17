@@ -20,14 +20,10 @@
   <div class="col-2 homepage_content">
     <h2>Stuff I've written</h2>
     <hr/>
-    <h3><a href="">The Do list</a></h3>
-    <p class="date">Friday April 10th</p>
-
-    <h3><a href="">How do I learn "Rails"?</a></h3>
-    <p class="date">Friday April 10th</p>
-
-    <h3><a href="">Strive for better code</a></h3>
-    <p class="date">Friday April 10th</p>
+    <% @articles.each do |article| %>
+      <h3><%= link_to article.title, article %></h3>
+      <p class="date"><%= article.created_at.strftime("%A %b %d") %></p>
+    <% end %>
   </div>
 
 

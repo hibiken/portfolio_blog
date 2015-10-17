@@ -7,27 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header id="main_navigation" class="clearfix">
-    <a href="#" class="name">Ken Hibino</a>
-    <nav>
-      <%= link_to "Articles", articles_path %>
-      <a href="#">Projects</a>
-      <%= link_to "Contact", contact_path %>
-    </nav>
-  </header>
+  <%= render 'layouts/header' %>
 
 
 <%= yield %>
 
 
-<footer id="main_footer">
-  <p class="copyright">&copy; 2015 Ken Hibino</p>
-  <nav>
-    <a href="#"><span class="icon-twitter"></span></a>
-    <a href="#"><span class="icon-github2"></span></a>
-    <a href="#"><span class="icon-google-plus"></span></a>
-  </nav>
-</footer>
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>

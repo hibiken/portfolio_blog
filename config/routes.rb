@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   
   resources :articles
+  resources :projects
 
   root 'static_pages#home'
 

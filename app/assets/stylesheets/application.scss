@@ -1,22 +1,21 @@
 
 
-@import 'normalize';
-@import 'assets';
-@import 'variables_mixins';
-@import 'universal';
-
-@import 'layouts';
+@import 'partials/normalize';
+@import 'partials/assets';
+@import 'partials/variables_mixins';
+@import 'partials/base';
+@import 'partials/layouts';
 
 
 /**** Pages ****/
-@import 'home';
-@import 'articles.index';
-@import 'articles.show';
+@import 'pages/home';
+@import 'pages/articles.index';
+@import 'pages/articles.show';
 
 /**** Components ****/
-@import 'pagination';
-@import 'form';
-@import 'pygments';
+@import 'components/pagination';
+@import 'components/form';
+@import 'components/pygments';
 
 
 

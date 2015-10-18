@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :get_project, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @projects = Project.order(created_at: :desc).paginate(page: params[:page])

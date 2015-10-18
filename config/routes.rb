@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'contact' => 'static_pages#contact'
   
   resources :articles
   resources :projects
+  resources :contacts, only: [:new, :create]
 
   root 'static_pages#home'
 

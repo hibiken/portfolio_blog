@@ -5,11 +5,11 @@
 // Icomoon fonts
 @font-face {
   font-family: 'icomoon';
-  src:url('fonts/icomoon.eot?razhou');
-  src:url('fonts/icomoon.eot?razhou#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?razhou') format('truetype'),
-    url('fonts/icomoon.woff?razhou') format('woff'),
-    url('fonts/icomoon.svg?razhou#icomoon') format('svg');
+  src:font-url('fonts/icomoon.eot?razhou');
+  src:font-url('fonts/icomoon.eot?razhou#iefix') format('embedded-opentype'),
+    font-url('fonts/icomoon.ttf?razhou') format('truetype'),
+    font-url('fonts/icomoon.woff?razhou') format('woff'),
+    font-url('fonts/icomoon.svg?razhou#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }

@@ -14,6 +14,9 @@
 
   <hr>
 
+  <%= link_to "Edit", edit_project_path(@project) %>
+  <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure you want to delete this project?" } %>
+
 </div>
 
 
@@ -37,12 +40,3 @@
 
 
 
-
-
-
-
-
-
-
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>

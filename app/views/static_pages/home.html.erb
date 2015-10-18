@@ -30,6 +30,9 @@
       <h3><%= link_to article.title, article %></h3>
       <p class="date"><%= article.created_at.strftime("%A, %b %d") %></p>
     <% end %>
+    <div class="see_more_button">
+      <%= link_to "See more", articles_path, class: 'button uppercase' %>
+    </div>
   </div>
 
 
@@ -42,5 +45,8 @@
       <h3><%= link_to project.title, project %></h3>
       <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
     <% end %>
+    <div class="see_more_button">
+      <%= link_to "See more", projects_path, class: 'button uppercase' %>
+    </div>
   </div>
 </div>

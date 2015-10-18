@@ -57,6 +57,18 @@
   p {
     margin: 0 0 0.75em 0;
   }
+  .see_more_button {
+    padding-top: 1em;
+    a {
+      border-color: $highlight;
+      color: $highlight;
+      transition: all 200ms;
+      &:hover {
+        background: $highlight;
+        color: $white;
+      }
+    }
+  }
 }
 
 .about {
@@ -67,3 +79,4 @@
     text-decoration: none;
   }
 }
+

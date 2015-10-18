@@ -7,6 +7,10 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   border: 2px solid $border;
   padding: 1em;
   margin: 0.5em 0 2em 0;
+  &:focus {
+    outline: none;
+    border: 2px solid $highlight;
+  }
 }
 
 textarea {
@@ -16,22 +20,19 @@ textarea {
 input[type="submit"], .button {
   outline: none;
   background: transparent;
-  border: 2px solid $border;
+  border: 2px solid $highlight;
   text-align: center;
   font-size: 1em;
-  color: $dark;
+  color: $highlight;
   text-decoration: none;
   padding: 1em 2em;
+  transition: all 200ms;
   &:hover {
-    border: 2px solid $highlight;
-    color: $highlight;
+    background: $highlight;
+    color: $white;
   }
 }
 
-.button_wrapper {
-  text-align: center;
-  margin-top: 4em;
-}
 .project_button {
   background: $highlight;
   color: $white;

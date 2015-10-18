@@ -1,9 +1,11 @@
 
 /******* Header *******/
 #main_navigation {
-  padding: 2.5em 5%;
+  padding: 2em 5%;
   border-bottom: 1px solid $border;
+  background: $ken-ruby;
   .name {
+    background: $white;
     font-weight: 700;
     font-size: 0.8em;
     letter-spacing: 4px;
@@ -16,9 +18,9 @@
   }
   nav {
     float: right;
-    padding-top: 1.5rem;
+    padding-top: 1.3rem;
     a {
-      color: $dark;
+      color: $white;
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
@@ -43,11 +45,12 @@
     a {
       text-decoration: none;
       span {
-        color: $dark;
+        color: $ken-ruby;
         margin-left: 1em;
         padding-top: 0.2em;
+        font-size: 1.5em;
         &:hover {
-          color: $highlight;
+          color: $ken-ruby-hover;
         }
       }
     }

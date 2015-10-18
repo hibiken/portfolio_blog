@@ -42,3 +42,19 @@ input[type="submit"], .button {
 .hidden {
   display: none;
 }
+
+#admin_links {
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  text-align: center;
+  padding: 1em 0;
+  margin: 3em 0;
+  a {
+    color: $highlight;
+    margin: 0 1em;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}

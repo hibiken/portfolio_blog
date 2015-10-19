@@ -6,12 +6,26 @@
   img {
     border-radius: 50%;
     vertical-align: middle;
-    margin-right: 3.5em;
+    margin-right: 2.5em;
   }
   h2 {
     display: inline;
     position: relative;
-    bottom: 0.5em;
+    bottom: 1em;
+    padding: 1rem;
+    background: #efefef;
+    border-radius: 18px;
+    border-bottom-left-radius: 0;
+    position: relative;
+    .arrow_left {
+      position: absolute;
+      left: -12px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 12px solid#efefef;
+      border-left: 12px solid transparent;
+    }
   }
 }
 

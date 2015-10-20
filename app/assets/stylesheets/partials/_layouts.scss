@@ -52,12 +52,13 @@
     a {
       text-decoration: none;
       span {
-        color: $ken-ruby;
+        color: $dark;
         margin-left: 1em;
         padding-top: 0.2em;
         font-size: 1.5em;
+        transition: all 200ms;
         &:hover {
-          color: $ken-ruby-hover;
+          color: $ken-ruby;
         }
       }
     }

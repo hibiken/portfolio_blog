@@ -33,11 +33,27 @@
     text-decoration: none;
   }
   span {
-    color: $ken-ruby;
     padding: 1em 1.5em;
     &:hover {
       cursor: pointer;
-      color: $ken-ruby-hover;
+    }
+    &.facebook {
+      color: $facebook;
+      &:hover {
+        color: $facebook-hover;
+      }
+    }
+    &.twitter {
+      color: $twitter;
+      &:hover {
+        color: $twitter-hover;
+      }
+    }
+    &.google-plus {
+      color: $googleplus;
+      &:hover {
+        color: $googleplus-hover;
+      }
     }
   }
 }

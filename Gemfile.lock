@@ -88,6 +88,7 @@ GEM
     orm_adapter (0.5.0)
     pg (0.18.3)
     posix-spawn (0.3.11)
+    puma (2.14.0)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
@@ -178,6 +179,7 @@ DEPENDENCIES
   jquery-rails
   mail_form (~> 1.5.1)
   pg
+  puma (~> 2.14)
   pygments.rb (~> 0.6.3)
   rails (= 4.2.4)
   rails_12factor

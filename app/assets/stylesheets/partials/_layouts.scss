@@ -38,6 +38,21 @@
 
 /******* footer *******/ 
 
+
+.page_wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -2em; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+#main_footer, .page-wrap:after {
+  height: 2em;
+}
+
 #main_footer {
   padding: 2.5em 5%;
   border-top: 1px solid $border;

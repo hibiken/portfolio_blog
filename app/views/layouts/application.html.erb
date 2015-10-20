@@ -7,16 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
+  <div class="page_wrap">
+    <%= render 'layouts/header' %>
 
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% elsif alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
 
-<%= yield %>
+    <%= yield %>
+
+  </div>
 
 
   <%= render 'layouts/footer' %>

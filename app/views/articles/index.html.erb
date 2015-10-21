@@ -6,6 +6,11 @@
     <div class="post">
       <p class="date"><%= article.created_at.strftime("%A, %b %d") %></p>
       <h2><%= link_to article.title.titleize, article %></h2>
+      <ul class="keywords">
+        <% keywords(article).each do |keyword| %>
+          <li class="<%= keyword.downcase %>"><%= keyword %></li>
+        <% end %>
+      </ul>
       <hr>
     </div>
   <% end %>

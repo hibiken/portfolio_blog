@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  validates :title, :content, presence: true
+  validates :title, :content, :keywords, presence: true
   extend FriendlyId
   friendly_id :title, use: :slugged
 end

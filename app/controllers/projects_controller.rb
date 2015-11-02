@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.update_attribute(project_params)
+    if @project.update_attributes(project_params)
       flash[:success] =  "Cool, you updated your project!"
       redirect_to @project
     else

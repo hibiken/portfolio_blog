@@ -2,6 +2,6 @@
 <div id="share_box">
   <p>Share this article</p>
   <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= article_url(@article) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0)"><span class="icon-facebook2 facebook"></span></a>
-  <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @article.title %> by @Hibino7Ken - &amp;url=<% article_url(@article) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0)"><span class="icon-twitter2 twitter"></span></a>
+  <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @article.title %> by @Hibino7Ken - &amp;url=<%= article_url(@article) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0)"><span class="icon-twitter2 twitter"></span></a>
   <a onclick="javascript:window.open('http://plus.google.com/share?url=<%= article_url(@article) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0)"><span class="icon-google-plus2 google-plus"></span></a>
 </div>

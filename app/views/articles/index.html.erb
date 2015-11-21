@@ -2,9 +2,8 @@
 
 
 <div id="posts_wrapper" class="skinny_wrapper">
-  <%= form_tag articles_path, method: :get do %>
-    <%= text_field_tag :q, params[:q], placeholder: "Search articles ..." %>
-    <%= submit_tag "Go", name: nil %>
+  <%= form_tag articles_path, method: :get, id: 'articles_search' do %>
+    <%= search_field_tag :q, params[:q], placeholder: "Search articles ..." %><button type="submit"><span class="icon-search2"></span></button>
   <% end %>
   <% @articles.each do |article| %>
     <div class="post">

@@ -1,14 +1,15 @@
 class ArticlesController < ApplicationController
   before_action :get_article, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  
+  before_action :authenticate_user!, except: [:index, :show, :search]
+  before_action :check_query, only: :index
 
   def index
-    if params[:q].present?
-      @articles = Article.fulltext_search(params[:q]).paginate(page: params[:pgae], per_page: 8)
-    else
-      @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 8)
-    end
+    @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 8)
+  end
+
+  def search
+    @articles = Article.fulltext_search(params[:q]).paginate(page: params[:pgae], per_page: 8)
+    render :index
   end
 
   def show
@@ -56,5 +57,10 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :content, :keywords, :slug)
     end
 
-    
+    def check_query
+      if params[:q].present?
+        redirect_to search_articles_url(q: params[:q])
+      end
+    end
+
 end

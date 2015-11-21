@@ -87,6 +87,10 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.3)
+    pg_search (1.0.5)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     posix-spawn (0.3.11)
     puma (2.14.0)
     pygments.rb (0.6.3)
@@ -178,6 +182,7 @@ DEPENDENCIES
   jquery-rails
   mail_form (~> 1.5.1)
   pg
+  pg_search (~> 1.0)
   puma (~> 2.14)
   pygments.rb (~> 0.6.3)
   rails (= 4.2.4)

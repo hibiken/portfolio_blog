@@ -2,6 +2,10 @@
 
 
 <div id="posts_wrapper" class="skinny_wrapper">
+  <%= form_tag articles_path, method: :get do %>
+    <%= text_field_tag :q, params[:q], placeholder: "Search articles ..." %>
+    <%= submit_tag "Go", name: nil %>
+  <% end %>
   <% @articles.each do |article| %>
     <div class="post">
       <p class="date"><%= article.created_at.strftime("%A, %b %d") %></p>

@@ -1,6 +1,9 @@
 <div class="profile">
   <%= image_tag 'avatar.jpg', alt: "Ken's profile picture", size: '150x150' %>
-  <h2>Hi, I'm Ken and I'm a full stack developer<span class="arrow_left"></span></h2>
+  <h2>Hi, I'm Ken and<br> I'm a full stack developer<span class="arrow_left"></span></h2>
+  <%= form_tag articles_path, method: :get, id: 'articles_search' do %>
+    <%= search_field_tag :q, params[:q], placeholder: "Search articles ..." %><button type="submit"><span class="icon-search2"></span></button>
+  <% end %>
 </div>
 
 
@@ -9,15 +12,13 @@
     <h2>About Me</h2>
     <hr/>
     <p>
-     I'm Ken Hibino, currently in a Computer Science program at State University of New York at Plattsburgh. I'm passionate about Web development and Software Engineering in general. I'm currently looking for a job as a juniour level developer using my skills in Ruby on Rails and AngularJS.  
+     I'm Ken Hibino, currently in a Computer Science program at State University of New York at Plattsburgh. I'm passionate about Web development with cutting-edge technologies. I'm currently looking for a job as a juniour level developer using my skills in Ruby on Rails and AngularJS.  
     </p>
 
-    <p>
-     I am currently working for a start-up company called "Intralist" based in New York City. Please visit <a href="https://www.intralist.com">Intralist</a> to see our beta version of the site. 
-    </p>
+    <p>I'm originally from Tokyo, Japan. I have lived in Japan, England, and US. Traveling have become part of my life over the years. I enjoy  traveling to new places and discovering different cultures.</p>
 
     <p>
-     I enjoy outdoor sports (especially soccer) and I recently started getting into work out at the gym. 
+     I also enjoy coding, playing outdoor sports (especially soccer) and working out at the gym. 
     </p>
   </div>
 

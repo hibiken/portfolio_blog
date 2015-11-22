@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :get_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show, :search]
-  before_action :check_query, only: :index
+  before_action :check_for_query, only: :index
 
   def index
     @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 8)
@@ -57,10 +57,8 @@ class ArticlesController < ApplicationController
       params.require(:article).permit(:title, :content, :keywords, :slug)
     end
 
-    def check_query
-      if params[:q].present?
-        redirect_to search_articles_url(q: params[:q])
-      end
+    def check_for_query
+      redirect_to search_articles_url(q: params[:q]) if params[:q].present?
     end
 
 end

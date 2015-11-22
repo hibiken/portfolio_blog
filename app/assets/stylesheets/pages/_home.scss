@@ -3,13 +3,14 @@
 
 .profile {
   padding: 1.5rem 5% 0;
+  position: relative;
   img {
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 2.5em;
   }
   h2 {
-    display: inline;
+    display: inline-block;
     position: relative;
     bottom: 1em;
     padding: 1rem;
@@ -26,6 +27,12 @@
       border-bottom: 12px solid#efefef;
       border-left: 12px solid transparent;
     }
+  }
+  #articles_search {
+    position: absolute;
+    min-width: 340px;
+    top: 1.5rem;
+    right: 5%;
   }
 }
 

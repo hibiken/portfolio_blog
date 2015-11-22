@@ -6,6 +6,7 @@
   </header>
 
   <div id="content">
+    <%= image_tag @project.image.url(:thumb), class: 'project_image' if @project.image? %>
     <%= markdown @project.description %>
     <div class="button_wrapper">
       <a href="<%= @project.link %>" class="project_button" target="_blank">Visit <%= @project.title %></a>

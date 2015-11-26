@@ -51,6 +51,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'factory_girl_rails', '~> 4.5'
+end
+
+group :test do
+  gem 'faker', '~> 1.6'
+  gem 'capybara', '~> 2.5'
+  gem 'database_cleaner', '~> 1.5'
+  gem 'launchy', '~> 2.4'
+  gem 'selenium-webdriver', '~> 2.48'
 end
 
 group :development do

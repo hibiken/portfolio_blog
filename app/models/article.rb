@@ -1,5 +1,7 @@
 class Article < ActiveRecord::Base
   validates :title, :content, :keywords, presence: true
+  validates :title, uniqueness: { case_sensitive: false }
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 

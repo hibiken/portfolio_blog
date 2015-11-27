@@ -2,32 +2,31 @@ require 'rails_helper'
 
 describe Article do
   it "is valid with title, content, and keywords" do
-    article = Article.new(title: 'Awesome Stuff', content: 'some awesome content', keywords: 'stuff, awesome')
-    expect(article).to be_valid
+    expect(build(:article)).to be_valid
   end
 
   it "is invalid without title" do
-    article = Article.new(title: '')
+    article = build(:article, title: nil)
     article.valid?
     expect(article.errors[:title]).to include("can't be blank")
   end
 
   it "is invalid without content" do
-    article = Article.new(content: '   ')
+    article = build(:article, content: nil)
     article.valid?
     expect(article.errors[:content]).to include("can't be blank")
   end
 
   it "is invalid without keywords" do
-    article = Article.new(keywords: nil)
+    article = build(:article, keywords: nil)
     article.valid?
     expect(article.errors[:keywords]).to include("can't be blank")
   end
  
   it "is invalid with a duplicate title" do
-    Article.create!(title: 'Awesome Stuff', content: 'some awesome content', keywords: 'stuff, awesome')
+    create(:article, title: "Awesome Stuff")
 
-    article = Article.new(title: 'Awesome Stuff', content: 'different awesome stuff', keywords: 'stuff, cool')
+    article = build(:article, title: "Awesome Stuff")
     article.valid?
     expect(article.errors[:title]).to include("has already been taken")
   end

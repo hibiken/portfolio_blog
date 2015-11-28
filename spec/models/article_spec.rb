@@ -5,6 +5,10 @@ describe Article do
     expect(build(:article)).to be_valid
   end
 
+  it "is invalid with invalid factory" do
+    expect(build(:invalid_article)).not_to be_valid
+  end
+
   it "is invalid without title" do
     article = build(:article, title: nil)
     article.valid?

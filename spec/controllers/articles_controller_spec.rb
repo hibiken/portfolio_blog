@@ -18,8 +18,8 @@ describe ArticlesController do
 
     context "without params[:q]" do
       it "populates an array of all articles" do
-        article1 = create(:article)
-        article2 = create(:article)
+        article1 = create(:published_article)
+        article2 = create(:published_article)
 
         get :index 
         expect(assigns(:articles)).to match_array([article1, article2])
@@ -34,13 +34,13 @@ describe ArticlesController do
 
   describe "GET #show" do
     it "assigns the requested article to @article" do
-      article = create(:article)
+      article = create(:published_article)
       get :show, id: article
       expect(assigns(:article)).to eq(article)
     end
 
     it "renders the :show template" do
-      article = create(:article)
+      article = create(:published_article)
       get :show, id: article
       expect(response).to render_template(:show)
     end
@@ -77,7 +77,7 @@ describe ArticlesController do
 
     context "when user is not signed in" do
       it "redirects to sign in page" do
-        article = create(:article)
+        article = create(:published_article)
         get :edit, id: article
         expect(response).to redirect_to new_user_session_url
       end
@@ -90,13 +90,13 @@ describe ArticlesController do
       end
 
       it "assigns the requested article to @article" do
-        article = create(:article)
+        article = create(:published_article)
         get :edit, id: article
         expect(assigns(:article)).to eq(article)
       end
 
       it "renders the :edit template" do
-        article = create(:article)
+        article = create(:published_article)
         get :edit, id: article 
         expect(response).to render_template :edit
       end
@@ -148,7 +148,7 @@ describe ArticlesController do
   describe "PATCH #update" do
 
     before(:each) do
-      @article = create(:article, title: "My awesome blog post", content: "some awesome stuff", keywords: "ruby, rails")
+      @article = create(:published_article, title: "My awesome blog post", content: "some awesome stuff", keywords: "ruby, rails")
     end
 
     context "when user is not signed in" do
@@ -211,7 +211,7 @@ describe ArticlesController do
   describe "DELETE #destroy" do
 
     before :each do
-      @article = create(:article)
+      @article = create(:published_article)
     end
 
     context "when user is not signed in" do

@@ -19,6 +19,7 @@ textarea {
 }
 
 input[type="submit"], .button {
+  margin-top: 1em;
   outline: none;
   background: transparent;
   border: 2px solid $highlight;

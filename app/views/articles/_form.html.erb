@@ -24,6 +24,10 @@
 
   <br>
 
-  <%= f.submit "Publish" %>
+  <%= f.label :published, "Ready to publish?" %>
+  <%= f.check_box :published %>
 
+  <br>
+
+  <%= f.submit "Save" %>
 <% end %>

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-
-  
+ 
   devise_for :users
   resources :articles do
     collection do
       get 'search'
+      get 'drafts'
     end
   end
   resources :projects

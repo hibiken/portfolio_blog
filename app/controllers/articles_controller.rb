@@ -4,11 +4,11 @@ class ArticlesController < ApplicationController
   before_action :check_for_query, only: :index
 
   def index
-    @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 8)
+    @articles = Article.published.paginate(page: params[:page])
   end
 
   def search
-    @articles = Article.fulltext_search(params[:q]).paginate(page: params[:pgae], per_page: 8)
+    @articles = Article.fulltext_search(params[:q]).paginate(page: params[:page])
     render :index
   end
 
@@ -47,6 +47,12 @@ class ArticlesController < ApplicationController
     redirect_to articles_url
   end
 
+  def drafts
+    @articles = Article.drafts.paginate(page: params[:page])
+    render :index
+  end
+
+
   private 
 
     def get_article
@@ -54,7 +60,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params 
-      params.require(:article).permit(:title, :content, :keywords, :slug)
+      params.require(:article).permit(:title, :content, :keywords, :slug, :published)
     end
 
     def check_for_query

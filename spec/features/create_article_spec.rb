@@ -18,7 +18,7 @@ feature "Creating an article" do
       fill_in "Title", with: "Ruby on Rails is Awesome"
       fill_in "Write your article here", with: Faker::Lorem.paragraph
       fill_in "Enter keywords", with: "ruby, rails, framework"
-      click_button "Publish"
+      click_button "Save"
       }.to change(Article, :count).by(1)
 
     expect(current_path).to eq article_path(Article.last)

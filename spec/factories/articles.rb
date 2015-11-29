@@ -4,6 +4,10 @@ FactoryGirl.define do
     content { Faker::Lorem.paragraph }
     keywords { Faker::Lorem.words(3).join(", ") }
 
+    factory :published_article do
+      published true
+    end
+
     factory :invalid_article do
       title nil
     end

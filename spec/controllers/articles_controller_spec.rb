@@ -245,8 +245,8 @@ describe ArticlesController do
   describe "GET #search" do
     
     before :each do
-      @ruby = create(:article, title: "The Ruby Way", content: "Ruby is awesome language", keywords: "ruby, programming, matz")
-      @rails = create(:article, title: "The Rails 4 Way", content: "Rails is an awesome framework", keywords: "rails, framework, dhh")
+      @ruby = create(:published_article, title: "The Ruby Way", content: "Ruby is awesome language", keywords: "ruby, programming, matz")
+      @rails = create(:published_article, title: "The Rails 4 Way", content: "Rails is an awesome framework", keywords: "rails, framework, dhh")
     end
 
     context "when searched for query word that matches articles" do

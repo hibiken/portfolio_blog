@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.fulltext_search(params[:q]).paginate(page: params[:page])
+    @articles = Article.published.fulltext_search(params[:q]).paginate(page: params[:page])
     render :index
   end
 

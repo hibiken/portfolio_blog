@@ -20,4 +20,10 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
 
+  def nav_link_to(text, url)
+    css_classes = []
+    css_classes << "active" if current_page?(url)
+    link_to text, url, class: css_classes.join(" ")
+  end
+
 end

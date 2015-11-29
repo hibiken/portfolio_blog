@@ -1,11 +1,11 @@
 <header id="main_navigation" class="clearfix">
   <%= link_to "Ken Hibino", root_path, class: "name" %>
   <nav>
-    <%= link_to "Articles", articles_path %>
-    <%= link_to "Projects", projects_path %>
-    <%= link_to "Contact", new_contact_path %>
+    <%= nav_link_to "Articles", articles_path %>
+    <%= nav_link_to "Projects", projects_path %>
+    <%= nav_link_to "Contact", new_contact_path %>
     <% if user_signed_in? %>
-      <%= link_to "Drafts", drafts_articles_path %>
+      <%= nav_link_to "Drafts", drafts_articles_path %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     <% end %>
   </nav>

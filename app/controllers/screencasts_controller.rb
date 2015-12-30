@@ -46,7 +46,7 @@ class ScreencastsController < ApplicationController
   private
 
     def get_screencast
-      @screencast = Screencast.find(params[:id])
+      @screencast = Screencast.friendly.find(params[:id])
     end
 
     def screencast_params

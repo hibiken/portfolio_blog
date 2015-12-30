@@ -50,6 +50,6 @@ class ScreencastsController < ApplicationController
     end
 
     def screencast_params
-      params.require(:screencast).permit(:title, :description)
+      params.require(:screencast).permit(:title, :description, :youtube_url)
     end
 end

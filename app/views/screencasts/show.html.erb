@@ -5,6 +5,10 @@
     <hr>
   </header>
 
+  <div class="embed_container" >
+    <%= embed(@screencast.youtube_url) %>
+  </div>
+
   <div id="content">
     <%= markdown @screencast.description %>
   </div>

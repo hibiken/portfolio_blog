@@ -1,0 +1,13 @@
+<h1 id="page_title">All Screencasts</h1>
+
+<div id="posts_wrapper" class="skinny_wrapper">
+  <% @screencasts.each do |screencast| %>
+    <div class="screencast">
+      <p class="date"><%= screencast.created_at.strftime("%A, %b %d") %></p>
+      <h2><%= link_to screencast.title, screencast %></h2>
+      <hr>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate @screencasts %>

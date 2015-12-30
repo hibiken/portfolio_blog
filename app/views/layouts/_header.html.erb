@@ -2,6 +2,7 @@
   <%= link_to "Ken Hibino", root_path, class: "name" %>
   <nav>
     <%= nav_link_to "Articles", articles_path %>
+    <%= nav_link_to "Screencasts", screencasts_path %>
     <%= nav_link_to "Projects", projects_path %>
     <%= nav_link_to "Contact", new_contact_path %>
     <% if user_signed_in? %>

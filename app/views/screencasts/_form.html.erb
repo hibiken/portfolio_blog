@@ -1,0 +1,24 @@
+<%= form_for @screencast do |f| %>
+
+  <% if @screencast.errors.any? %>
+    <h2><%= pluralize(@screencast.errors.count, "error") %> prevented this screencast from saving:</h2>
+    <ul>
+      <% @screencast.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+
+  <br>
+
+  <%= f.label :description, "Write your screencast description here" %><br>
+  <%= f.text_area :description %>
+
+  <br>
+
+  <%= f.submit "Publish" %>
+
+<% end %>

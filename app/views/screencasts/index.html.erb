@@ -1,6 +1,9 @@
 <h1 id="page_title">All Screencasts</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
+  <% if @screencasts.empty? %>
+    <h3 class="center">Screencasts coming soon!</h3>
+  <% end %>
   <% @screencasts.each do |screencast| %>
     <div class="post">
       <p class="date"><%= screencast.created_at.strftime("%A, %b %d") %></p>
